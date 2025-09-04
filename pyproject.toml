@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "poetry-vcs-renovate-repro"
+version = "0.1.0"
+description = "Reproduce Renovate/Poetry VCS cloning/auth behavior"
+authors = ["Your Name <you@example.com>"]
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+# Replace the org/repo and (optionally) the branch/tag in 'rev'
+private-lib-example = { git = "https://github.com/ladzaretti-testing/private-lib-example.git", rev = "main" }
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
